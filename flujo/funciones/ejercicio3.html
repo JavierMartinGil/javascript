@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora Ejercicio 3</title>
+</head>
+<body>
+
+    <script>
+        /* desarrollar una calculadora que nos pida dos numeros por separado y el calcula
+        que queremos hacer(suma, resta, multiplicacion y division)*/
+
+        /*var primerNumero = Number (prompt('Dime un numero'));
+        var segundoNumero =  Number (prompt('Dime otro número'));
+        var operacion = Number (prompt('¿Qué operacion deseas hacer?'));
+
+        var resultado = primerNumero, operacion, segundoNumero;
+
+        console.log(resultado);*/
+
+
+
+
+       function calculadora(pNumeroUno, pNumeroDos, operacion){
+
+          do {var pNumeroUno= prompt("Dime un numero");
+          } while (isNaN(pNumeroUno));
+
+          do {var pNumeroDos= prompt("Dime otro numero");
+          } while (isNaN(pNumeroDos));
+
+          do {var operacion= prompt("Que operacion quieres hacer?");
+          } while (operacion != "+" && operacion != "-" && operacion != "*" && operacion != "/"); 
+
+        switch(operacion){
+
+            case "+":
+                console.log(pNumeroUno + pNumeroDos);
+            break;
+
+            case "-":
+                console.log(pNumeroUno - pNumeroDos);
+            break;
+
+            case "*":
+                console.log(pNumeroUno * pNumeroDos);
+            break;
+
+            case "/":
+                console.log(pNumeroUno / pNumeroDos);
+            break;
+
+            default: 
+                alert('Operacion no permitida');
+            break;
+            }
+        }
+
+        calculadora();    
+    
+    
+    </script>
+    
+</body>
+</html>

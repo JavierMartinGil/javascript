@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+
+    <script>
+        
+        //hacer una funcion que me pinte un circulo sabiendo el radio y el color
+        // area del circulo = pi*(r**2)
+
+
+        function circulo(pRadio, pColor){
+
+            var pintarCirculo = '<div style="width:'+pRadio*2+'px; height: '+pRadio*2+'px; border-radius: 50%; background-color: '+pColor+';" </div>';
+            return pintarCirculo;
+
+        }
+
+        var circuloFinal = circulo(200, "blue");
+
+        document.write(circuloFinal);
+    
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 2 - black jack</title>
+
+    <style>
+        .carta{
+
+            width: 50px;
+            height: 100px;
+            float: left;
+            margin:5px;
+        }
+
+        .rojo{
+
+            background: red;
+        }
+
+        .verde{
+
+            background: green;
+        }
+
+        .azul{
+
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+    /* quiero que me pidas por pantalla un numero de cartas y un color de tres posibles colores
+    (azul, rojo, verde).  Me tienes que pintar las cartas en el color elegido.   */    
+    
+
+    do{
+        var numeroCuadrados = prompt('Dime un numero de cartas');
+    } while (isNaN(numeroCuadrados));
+
+    var color = prompt('Dime un color (azul, rojo o verde)');
+    color = color.toLowerCase();
+
+    for (var i=1; i<= numeroCuadrados; i++){
+
+        if(color=="rojo")
+        {
+            document.write('<div class="carta rojo"></div>');
+        }
+
+        if(color=="verde")
+        {
+            document.write('<div class="carta verde"></div>');
+        }
+
+        if(color=="azul")
+        {
+            document.write('<div class="carta azul"></div>');
+        }
+    }
+    
+    </script>
+    
+</body>
+</html>

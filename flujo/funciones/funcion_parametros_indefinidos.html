@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parametros indefinidos</title>
+</head>
+<body>
+
+    <script>
+      /*  function media(pNumero1, pNumero2)
+        {
+            return (pNumero1 + pNumero2) / 2;
+
+    
+        }
+    
+        */
+
+        // parametros indefinidos
+
+        function media(){
+            // console.log(arguments.length);
+            // lista o array se numera empezando por el 0 y acabando con longitud -1
+            // de 0 a n-1, siendo n la longitud de un array
+            // console.log(arguments[3]);
+            var sumatorio = 0;
+            var numeroArgumentos = arguments.length;
+
+            for(var i= 0; i < arguments.length; i++ ){
+                
+                sumatorio+= arguments[i];
+                
+            }
+
+            var resultado = sumatorio / numeroArgumentos;
+            console.log(resultado);
+        }
+
+        media(2,3,45,6);
+        media(1,3);
+        media(10,20,30);
+    </script>
+    
+</body>
+</html>

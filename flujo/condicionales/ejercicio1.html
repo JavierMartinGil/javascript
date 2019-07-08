@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portero discoteca Ejercicio 1 condicionales</title>
+</head>
+<body>
+
+
+    <script>
+     // en una discoteca no se puede entrar si eres menos de edad, la edad claves es 18 años
+     // pregunta por pantalla la edad y dile al usuario si puede entrar o no
+
+
+   /*  var edad = prompt("Dime tu edad");
+
+     edad = Number(edad);
+
+     if (typeof(edad)!= Number){
+
+         alert("Introduce tu edad en dígitos");
+         prompt("Dime tu edad");
+     } 
+
+     if (edad >= 18) 
+        {
+            alert("Puedes entrar");
+        }        
+        else
+        {
+            alert("No puedes entrar");
+        }; */
+
+        // opcion 2     
+
+
+        var edad = parseInt(prompt("Dime tu edad"));
+
+        const EDAD_CORTE = 18;
+
+        if(isNaN(edad)== true)
+        {
+            alert("Edad no reconocida");
+                    
+        }
+        else
+        {
+            var mensaje = edad < EDAD_CORTE ? "Un vasito de leche y a la cama" : "Bienvenido";
+            alert(mensaje);
+        }      
+
+        
+        
+        /* opcion 1
+
+        if (edad < EDAD_CORTE){
+
+            alert("Un vasito de leche y a la cama");
+        }
+
+        else {
+
+            alert("Bienvenido");
+        } */        
+    
+    
+    </script>
+    
+</body>
+</html>

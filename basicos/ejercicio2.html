@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+
+    <script>
+    /* dado 7654321 quiero que me saqueis por pantalla el:
+    último dígito = 1
+    última decena = 21
+    ultima centena = 321 */
+
+    var numero = 7654321;
+
+    var ultimoDigito = numero%10;
+    var ultimaDecena = numero%100;
+    var ultimaCentena = numero%1000;
+    
+
+    console.log(ultimoDigito);
+    console.log(ultimaDecena);
+    console.log(ultimaCentena);
+
+    alert('En numero ' + numero + ' el ultimo digito es ' + ultimoDigito + 
+    ' la ultima decena  es ' + ultimaDecena + ' y la ultima centena es ' + ultimaCentena)
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio IVA</title>
+</head>
+<body>
+
+
+    <script>
+        
+        /* Que me pida una cantidad de dinero por pantalla y me calcule el precio de venta al publico 
+        o PVP. Precio del artículo + iva (21%) */
+
+        var cantidad = prompt("Introduce el precio sin IVA");
+        const IVA = 1.21;
+        cantidad = Number(cantidad);
+        var pvp = cantidad*IVA;
+
+        alert('El precio de venta al público es ' + pvp + '€')
+
+        console.log(pvp);        
+        
+        
+    </script>
+    
+</body>
+</html>

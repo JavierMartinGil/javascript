@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+     // introducir un numero por pantalla, quiero que me saqueis el ultimo digito,
+     // los 2 ultimos digitos y los 3 ultimos digitos de cualquier numero y si no
+     // es un numero pidais todo el rato que de un numero
+
+     do{
+         var numero = prompt('Dime un numero');
+
+     } while (isNaN(numero));
+
+     for(var i = 10; i<=1000; i= i*10){
+
+        console.log(numero%i);
+
+     }
+
+    /* console.log('El último dígito es ' + numero%10);
+     console.log('Los últimos 2 dígitos son ' + numero%100);
+     console.log('Los últimos 3 dígitos son ' + numero%1000); */
+    
+    
+    </script>
+    
+</body>
+</html>
