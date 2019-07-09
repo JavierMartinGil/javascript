@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array multidimensional</title>
+</head>
+<body>
+
+    <script>
+    
+    var aves = new Array('Aguila', 'Guacamayo', 'Periquito', 'Colibrí');
+
+    var felinos = new Array('Tigre', 'Leopardo', 'Pantera');
+
+    var anfibios = new Array('Hipopótamo', 'Rana', 'Cocodrilo');
+
+    var zoo = new Array();
+
+    zoo = [aves, anfibios, felinos];
+
+    //console.log(zoo);
+
+    for (var i=0; i<zoo.length; i++){
+
+        for (var j=0; j<zoo[i].length; j++){
+
+            console.log(zoo[i][j])
+        }
+
+    }
+
+    for (var i=0; i<zoo.length; i++){
+
+        if(i==0){var listado = document.write('<h1>Aves</h1><ul>');}
+        if(i==1){var listado = document.write('<h1>Felinos</h1><ul>');}
+        if(i==2){var listado = document.write('<h1>Anfibios</h1><ul>');}
+
+        for(var j=0; j<zoo[i].length; j++){
+
+            listado+=document.write('<li>'+zoo[i][j]+'</li>');
+        }
+    
+        listado+= document.write('</ul>');
+
+    }
+
+    
+    
+    
+    </script>
+    
+</body>
+</html>
