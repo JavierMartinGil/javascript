@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inex of</title>
+</head>
+<body>
+
+    <script>
+
+        /* index of busca cualquier elemento que introduzcamos entre parentesis, si lo encuentra,
+        me dice la posicion de lelemento en el array  y si no encuentra nada me devuelve -1 */
+
+        var listaAnimales = new Array('perro','gato','periquito');
+
+        var animal = "Periquito";
+        animal = animal.toLowerCase();
+
+        var encontrado = listaAnimales.indexOf(animal);
+
+        console.log(encontrado);
+        console.log(listaAnimales[encontrado]);
+        
+        
+    </script>
+    
+</body>
+</html>
