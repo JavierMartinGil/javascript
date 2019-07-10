@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter 2</title>
+</head>
+<body>
+    
+    <script>
+        
+        var listaAnimales = new Array(
+          {
+            especie: "aguila",
+            peso: 20,
+            color: "pardo",
+
+          },
+          {
+            especie: "hipopotamo",
+            peso: 3000,
+            color: "gris",
+          },
+          {
+            especie: "raton",
+            peso: 0.4,
+            color: "negro",
+          },
+          {
+            especie: "jirafa",
+            peso: 150,
+            color: "amarillo",
+          });
+
+          // console.log(listaAnimales);
+
+        /* quiero que me paseis una lista de animales que esten entre 10 y 300 kg */
+
+        var listaAnimalesPeso = new Array();
+
+        listaAnimalesPeso = listaAnimales.filter(function(pAnimal){
+
+            return (pAnimal.peso >= 10 && pAnimal.peso <= 300);
+        });
+
+
+        console.log(listaAnimalesPeso);
+
+        //filtrar animales cuyo color tenga mas de 4 letras
+
+
+        var animalesColor = new Array();
+
+        animalesColor = listaAnimales.filter(function(pAnimal){
+                return (pAnimal.color.length >=7);
+        });
+
+        console.log(animalesColor);
+
+
+        
+    </script>
+
+
+
+</body>
+</html>
