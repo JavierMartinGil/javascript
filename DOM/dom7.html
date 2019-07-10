@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 7</title>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, sunt maiores ut alias incidunt optio eos, quod repudiandae at esse velit obcaecati perferendis repellat laborum deleniti debitis et recusandae dolorum!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, sunt maiores ut alias incidunt optio eos, quod repudiandae at esse velit obcaecati perferendis repellat laborum deleniti debitis et recusandae dolorum!</p>        
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, sunt maiores ut alias incidunt optio eos, quod repudiandae at esse velit obcaecati perferendis repellat laborum deleniti debitis et recusandae doloru</p>       
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, sunt maiores ut alias incidunt optio eos, quod repudiandae at esse velit obcaecati perferendis repellat laborum deleniti debitis et recusandae dolorum!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, sunt maiores ut alias incidunt optio eos, quod repudiandae at esse velit obcaecati perferendis repellat laborum deleniti debitis et recusandae dolorum!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, sunt maiores ut alias incidunt optio eos, quod repudiandae at esse velit obcaecati perferendis repellat laborum deleniti debitis et recusandae dolorum!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, sunt maiores ut alias incidunt optio eos, quod repudiandae at esse velit obcaecati perferendis repellat laborum deleniti debitis et recusandae dolorum!</p>
+
+    <script>
+
+        // quiero que me pongais un parrafo en background color negro con texto blanco y un parrafo
+        // en color beige con texto negro salteados. A cada parrafo le añadimos un padding de 10px
+
+        var parrafos = document.getElementsByTagName('p');
+
+        for (var i=0; i<parrafos.length; i++) {
+
+                parrafos[i].style.padding="10px";
+
+
+            if (i%2==0){
+
+                parrafos[i].style.backgroundColor="black";
+                parrafos[i].style.color="white";
+
+            } else {
+                
+                parrafos[i].style.backgroundColor="beige";
+
+            }
+            
+        };
+    
+    </script>
+    
+</body>
+</html>
