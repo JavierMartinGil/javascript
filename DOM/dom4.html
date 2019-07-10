@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 4</title>
+</head>
+<body>
+
+    <ul id="menu">
+
+
+
+
+    </ul>
+
+
+    <script>
+    
+        var listaSecciones = new Array('Home','Contacto', 'Galeria');
+
+        // quiero crear un menu en base a mi lista que tenga enlaces a la lista
+
+        var menu = document.getElementById('menu');
+
+
+        for(elemento of listaSecciones){
+
+            menu.innerHTML += '<li>'+elemento+'</li>';
+        
+        };
+
+        /* otra solucion
+        
+        
+        for (var i =0; i<listaSecciones.length; i++)
+        {
+            
+            menu.innerHTML += ('<li>'+listaSecciones[i]+'</li>')
+        
+        } */
+        
+    
+    
+    </script>
+    
+</body>
+</html>

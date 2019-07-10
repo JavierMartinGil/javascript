@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 2</title>
+</head>
+<body>
+
+    <ul>
+        <li class="elemento">Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li class="elemento">Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li class="elemento">Item 7</li>
+        <li>Item 8</li>
+        <li class="elemento">Item 9</li>
+        <li class="elemento">Item 10</li>
+    </ul>
+
+    <ul>
+        <li>Adios</li>
+        <li>Hola</li>
+    </ul>
+
+    <script>
+    
+    var listados = document.getElementsByTagName('ul');
+
+    var primerListado = listados[0];
+
+    var elementos = primerListado.getElementsByClassName('elemento');
+
+    for(elemento of elementos){
+
+        elemento.innerHTML = "<strong>Texto cambiado</strong>";
+    }
+    
+    </script>
+</body>
+</html>
