@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 11</title>
+</head>
+<body>
+
+    <section id="profesional">
+        <h1>Par</h1>
+       <!-- <article class="contacto"><h3>Nombre y apellido del contacto</h3><ul><li>Telefono:916778990</li><li>Email: email@gmail.com</li></ul></article><hr> -->
+
+    </section>
+
+    <section id="particular">
+        <h1>Prof</h1>
+
+
+    </section>
+
+        <script>
+        
+        var agenda = new Array();
+
+        agenda = [
+            {
+                nombre: "Joaquin",
+                apellido: "Perez",
+                telefono: "918765432",
+                email: "joaquin@gmail.com",
+                tipo: "profesional"
+
+            },
+
+            {
+                nombre: "Ricardo",
+                apellido: "Martin",
+                telefono: "915678822",
+                email: "rm@gmail.com",
+                tipo: "profesional"
+
+            },
+
+            {
+                nombre: "Lucia",
+                apellido: "Gil",
+                telefono: "918765499",
+                email: "luci@gmail.com",
+                tipo: "profesional"
+
+            },
+
+            {
+                nombre: "Alberto",
+                apellido: "Manuel",
+                telefono: "919995432",
+                email: "alber@gmail.com",
+                tipo: "profesional"
+
+            },
+
+            {
+                nombre: "Luis",
+                apellido: "Ramirez",
+                telefono: "918769651",
+                email: "luisma@gmail.com",
+                tipo: "profesional"
+
+            },
+
+            {
+                nombre: "Carlo",
+                apellido: "Rodrigo",
+                telefono: "918555432",
+                email: "carlo@gmail.com",
+                tipo: "particular"
+
+            },
+
+            {
+                nombre: "Javier",
+                apellido: "Martin",
+                telefono: "918765400",
+                email: "javier@gmail.com",
+                tipo: "particular"
+
+            },
+
+            {
+                nombre: "Ernesto",
+                apellido: "Marin",
+                telefono: "918765964",
+                email: "ernes@gmail.com",
+                tipo: "particular"
+
+            },
+
+            {
+                nombre: "Manuel",
+                apellido: "Alvarez",
+                telefono: "918765866",
+                email: "manu@gmail.com",
+                tipo: "profesional"
+
+            },
+
+            {
+                nombre: "Ramiro",
+                apellido: "Ledesma",
+                telefono: "918725666",
+                email: "joaquin@gmail.com",
+                tipo: "profesional"
+
+            },
+
+            {
+                nombre: "Romulo",
+                apellido: "Garcia",
+                telefono: "914445432",
+                email: "rom@gmail.com",
+                tipo: "particular"
+
+            },
+        ];
+        
+        
+        // tengo que crear una funcion que me pinte por pantalla la agenda usando como formato
+        // lo del html
+
+        var seccion2 =  document.getElementById('profesional');
+        var seccion =  document.getElementById('particular');
+
+        function pintarAgenda(pAgenda, pSeccion){
+
+            for (contacto of pAgenda){               
+
+                // creo el h3 del titulo del contacto
+                var h3 = document.createElement('h3');
+                //genero su texto
+                var textoh3 = document.createTextNode(contacto.nombre + ' ' + contacto.apellido);
+                //meto el texto dentro del h3
+                h3.appendChild(textoh3);
+                //--------//
+                var li1 = document.createElement('li');
+                var li2 = document.createElement('li');
+                var li3 = document.createElement('li');
+
+                var textoli1 = document.createTextNode('Telefono: ' + contacto.telefono);
+                var textoli2 = document.createTextNode('Email: ' + contacto.email);
+                var textoli3 = document.createTextNode('Tipo: ' + contacto.tipo);
+
+                li1.appendChild(textoli1);
+                li2.appendChild(textoli2);
+                li3.appendChild(textoli3);
+
+                var listado = document.createElement('ul');
+
+                listado.appendChild(li1);
+                listado.appendChild(li2);
+                listado.appendChild(li3);
+
+                //--------//
+                // genero el article contenedor de todo y el hr
+
+                var article = document.createElement('article');
+                var hr = document.createElement('hr');
+
+                //-------------//
+
+                article.appendChild(h3);
+                article.appendChild(listado);
+                pSeccion.appendChild(article);
+                pSeccion.appendChild(hr);
+
+                               
+           }
+        };
+
+             
+          function filtrarAgendaPorTipo(pAgenda, pTipo){
+
+            var agendaFiltrada = pAgenda.filter(function (contacto){
+
+                return contacto.tipo == pTipo;
+            }); 
+
+            return agendaFiltrada
+        }
+
+        var agendaParticulares = filtrarAgendaPorTipo(agenda, "particular");
+        var agendaProfesionales = filtrarAgendaPorTipo(agenda, "profesional");
+
+        pintarAgenda(agendaParticulares, seccion2);
+        pintarAgenda(agendaProfesionales, seccion);
+
+
+     /*    for(entrada of agenda)
+        {
+            if(entrada.tipo == "profesional")
+            {
+                console.log(entrada.nombre + "-P");
+                var h3 = document.createElement('h3');
+                //genero su texto
+                var textoh3 = document.createTextNode(entrada.nombre + ' ' + entrada.apellido);
+                //meto el texto dentro del h3
+                h3.appendChild(textoh3);
+                //--------//
+                var li1 = document.createElement('li');
+                var li2 = document.createElement('li');
+                var li3 = document.createElement('li');
+
+                var textoli1 = document.createTextNode('Telefono: ' + entrada.telefono);
+                var textoli2 = document.createTextNode('Email: ' + entrada.email);
+                var textoli3 = document.createTextNode('Tipo: ' + entrada.tipo);
+
+                li1.appendChild(textoli1);
+                li2.appendChild(textoli2);
+                li3.appendChild(textoli3);
+
+                var listado = document.createElement('ul');
+
+                listado.appendChild(li1);
+                listado.appendChild(li2);
+                listado.appendChild(li3);
+
+                //--------//
+                // genero el article contenedor de todo y el hr
+
+                var article = document.createElement('article');
+                var hr = document.createElement('hr');
+
+                //-------------//
+
+                article.appendChild(h3);
+                article.appendChild(listado);
+                seccion.appendChild(article);
+                seccion.appendChild(hr);
+                
+            }
+            else
+            {
+                console.log(entrada.nombre + "-Pr")
+                console.log(entrada.nombre + "-P");
+                var h3 = document.createElement('h3');
+                //genero su texto
+                var textoh3 = document.createTextNode(entrada.nombre + ' ' + entrada.apellido);
+                //meto el texto dentro del h3
+                h3.appendChild(textoh3);
+                //--------//
+                var li1 = document.createElement('li');
+                var li2 = document.createElement('li');
+                var li3 = document.createElement('li');
+
+                var textoli1 = document.createTextNode('Telefono: ' + entrada.telefono);
+                var textoli2 = document.createTextNode('Email: ' + entrada.email);
+                var textoli3 = document.createTextNode('Tipo: ' + entrada.tipo);
+
+                li1.appendChild(textoli1);
+                li2.appendChild(textoli2);
+                li3.appendChild(textoli3);
+
+                var listado = document.createElement('ul');
+
+                listado.appendChild(li1);
+                listado.appendChild(li2);
+                listado.appendChild(li3);
+
+                //--------//
+                // genero el article contenedor de todo y el hr
+
+                var article = document.createElement('article');
+                var hr = document.createElement('hr');
+
+                //-------------//
+
+                article.appendChild(h3);
+                article.appendChild(listado);
+                seccion2.appendChild(article);
+                seccion2.appendChild(hr);
+            }  
+        } */
+       
+              
+        </script>     
+    
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 13</title>
+
+    <style>
+       /*  .cuadrado{
+
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+        } */
+    
+    </style>
+</head>
+<body>
+
+    <!-- <div class="cuadrado">
+
+
+    </div> -->
+
+    <script>
+
+        var contador = 0;
+        var posicion = 0;
+        var direccion = "derecha";
+
+    function crearCuadrado(){
+
+        var cuadrado = document.createElement('div');
+        cuadrado.id = 'cuadradoNuevo_'+posicion;
+        cuadrado.className = 'cuadrado';
+        cuadrado.style.width = "100px";
+        cuadrado.style.height = "100px";
+        cuadrado.style.backgroundColor = "violet";    
+        document.body.appendChild(cuadrado);
+
+        cuadrado.style.marginLeft= (posicion*100)+"px";
+        //cuadrado.style.marginLeft= "0px";
+        // cuadrado.style.marginLeft= contador*100+"px";
+        if (posicion ==3){
+           
+            direccion = "izquierda";
+        }
+        else if(posicion == 0) {
+           direccion = "derecha"
+        }; 
+        
+        if(direccion == "derecha")
+        {
+            posicion ++;
+        }
+        else{
+            posicion --;
+        }
+
+        contador++
+    }
+
+    crearCuadrado();
+
+</script>
+    
+</body>
+</html>
