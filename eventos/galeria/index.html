@@ -5,8 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Galeria JavaScript</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #carrusel{
+            width: 400px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        .botones div{
+            width: 50%;
+            height: 100px;
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            text-align: center;
+            padding: 35px;
+            cursor: pointer;
+        }
+
+        .botones div:hover{
+            background-color: tomato;
+        }
+
+        .botones{
+            display: flex;
+        }
+    
+    
+    </style>
 </head>
 <body>
-    
+
+    <div id="carrusel">
+
+        <div>
+            <img id="imagen" src="" alt="New York">
+        </div>
+        <div class="botones">
+            <div id="izq">Izquierda</div>
+            <div id="der">Derecha</div>
+        </div>
+    </div>
+    <script src="js/galeria.js"></script>
 </body>
 </html>
