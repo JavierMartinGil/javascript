@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos 3</title>
+    <style>
+        .raton{
+            width: 150px;
+            height: 100px;
+            border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
+            background-color: brown;
+            transition: .5s;
+            position: absolute;
+        }
+
+        .punto{
+
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            position: absolute;
+            color: white;
+        }
+
+        #punto1{
+            top:200px;
+            left:600px;
+        }
+
+        #punto2{
+            top:500px;
+            left:900px;
+        }
+
+        #punto3{
+            top:400px;
+            left:20px;
+        }
+    
+    </style>
+
+</head>
+<body>
+
+    
+    <button id="izq">IZQUIERDA</button>
+    <button id="der">DERECHA</button>
+    <button id="top">ARRIBA</button>
+    <button id="bottom">ABAJO</button>
+    <h1></h1>
+
+    <div class="punto" id="punto1"></div>
+    <div class="punto"  id="punto2"></div>
+    <div class="punto" id="punto3"></div>
+
+
+    <div class="raton">
+
+
+
+    </div>
+
+    <script>
+    
+    var raton = document.getElementsByClassName('raton')[0];
+    var numerox = 0;
+    var numeroy = 0;
+    var punto1 = document.getElementById('punto1');
+    //var contado = 0;
+
+    /* posicionPto1 = punto1.offsetLeft;
+    posicionRaton = raton.offsetLeft; */
+    h1 = document.getElementsByTagName('h1');
+
+   
+
+
+    btnDerecha = document.getElementById('der');
+    btnIzquierda = document.getElementById('izq');
+    btnArriba = document.getElementById('top');
+    btnAbajo = document.getElementById('bottom');
+
+
+
+    // raton.marginLeft = ('10px');
+
+   
+    btnDerecha.addEventListener('click', moverDerecha);
+    
+    function moverDerecha(e){
+       
+        numerox += 100;
+        raton.style.marginLeft = numerox+'px';
+        raton.style.transform = 'rotateZ(0deg)';
+        
+         
+    };
+
+    btnIzquierda.addEventListener('click', moverIzquierda);
+    
+    function moverIzquierda(e){
+
+        numerox -= 100;
+        raton.style.marginLeft = numerox+'px';
+        raton.style.transform = 'rotateZ(180deg)';
+        
+        
+    };
+
+    btnArriba.addEventListener('click', moverArriba);
+    
+    function moverArriba(e){
+
+        numeroy -= 100;
+        raton.style.marginTop = numeroy+'px';
+        raton.style.transform = 'rotateZ(-90deg)';
+        
+    };
+
+    btnAbajo.addEventListener('click', moverAbajo);
+    
+    function moverAbajo(e){
+
+        numeroy += 100;
+        raton.style.marginTop = numeroy+'px';
+        raton.style.transform = 'rotateZ(90deg)';
+        
+    };
+    
+    </script>
+    
+</body>
+</html>
