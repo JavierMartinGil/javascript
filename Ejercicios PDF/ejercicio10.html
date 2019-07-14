@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+
+    <script>
+/*         Recorrer una array de números cualesquiera y escribirlos en orden
+decreciente según el valor de dichos números y no el de su
+posición.
+Ej:
+Inicial 1,23,4,56,8,9,10
+Final 56,23,10,9,8,4,3,2,1 */
+
+
+        var numbers = [1,23,4,56,8,9,10];
+            numbers.sort(function(a, b) {
+            return a - b;
+            });
+            console.log(numbers);
+    
+    
+    </script>
+    
+</body>
+</html>

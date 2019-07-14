@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+
+    <script>
+    /* El factorial de un número entero n es una operación matemática
+que consiste en multiplicar todos los factores n x (n-1) x (n-
+2) x ... x 1. Así, el factorial de 5 es igual a: 5! = 5 x 4 x
+3 x 2 x 1 = 120. Realizar un programa que me
+calcule el factorial de un numero cualquiera que
+me den por teclado */
+
+        var numero = prompt('Escribe un numero para obtener su factorial');
+
+        var resultado = 1;
+
+        for(i=numero-1; i>=1; i--){
+
+            resultado+= resultado*i;
+            console.log(resultado);
+        }
+
+        //console.log(resultado);
+    
+    
+    </script>
+    
+</body>
+</html>
