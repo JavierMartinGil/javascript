@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+
+    <script>
+    /* Dadas tres variables enteras (v1, v2 y v3) escribir condiciones que
+expresen lo siguiente:
+Todas las variables son cero.
+Todas las variables son positivas.
+Todas las variables tienen el mismo signo.
+Todos sus valores son distintos.
+Dos de sus valores coinciden.
+Como máximo dos de sus valores coinciden.
+El valor de v2 está comprendido entre los de v1 y v3. */
+
+        var num1 = prompt('Escribe un numero');
+        var num2 = prompt('Escribe un segundo numero');
+        var num3 = prompt('Escribe un tercer numero');
+
+        if(num1 == 0 && num2 == 0 && num3 == 0){
+
+            alert('Todos los numeros son 0');
+
+        } 
+        
+        if(num1 >= 0 && num2 >= 0 && num3 >= 0){
+
+            alert('Todos los numeros son positivos');
+            
+        }
+        
+        if((num1 < 0 && num2 < 0 && num3 < 0) || (num1 >= 0 && num2 >= 0 && num3 >= 0)){
+
+            alert('Todos los numeros tienen el mismo signo');
+
+        } else {alert('No todos los numeros tienen el mismo signo')};
+        
+        if(num1==num2 && num2==num3 && num1==num3){
+
+            alert('Todos los numeros son iguales');
+        } else {
+            alert('No todos los numeros son iguales');
+        }
+
+        if(num1 == num2 || num1 == num3 || num2 == num3){
+
+            alert('Dos de los numeros son iguales')
+        }
+
+        if(num2 > num1 && num2 < num3){
+
+            alert('El num2 esta comprendido entre num1 y num3');
+        }
+    
+    
+    </script>
+    
+</body>
+</html>

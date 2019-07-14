@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 16</title>
+</head>
+<body>
+
+    <script>
+
+/* Realiza un script que cuente el número de vocales que tiene un
+texto. */
+    
+    var texto = prompt('Escribe un texto');
+
+    var contador = 0;
+
+    for(i=0; i<texto.length; i++){
+
+        var vocales = texto.charAt(i);
+
+        if (vocales == 'a' || vocales == 'e' || vocales == 'i' || vocales == 'o' || vocales == 'u'){
+            
+            contador++;
+        }
+
+    }
+     alert('El número de vocales del texto intriducido es '+ contador);
+    
+    </script>
+    
+</body>
+</html>

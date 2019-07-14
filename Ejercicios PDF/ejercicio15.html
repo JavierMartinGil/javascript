@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 15</title>
+</head>
+<body>
+
+    <script>
+    /* Escribir una frase por pantalla y que la aplicación te diga si dicha
+frase es palíndromo o no.
+Un palíndromo es un palabra que se escribe igual al derecho que
+al revés. dabale arroz a la zorra el abad */
+
+
+        var texto = prompt('Escribe un texto para ver si es un palindromo');
+        // var texto = texto.replace(' ','');
+        var textoReverse = texto.split('').reverse().toString();
+
+        for(i=0; i<textoReverse.length; i++){
+
+            textoReverse = textoReverse.replace(' ','');
+            textoReverse = textoReverse.replace(',','');
+          
+           
+        }
+
+        console.log(textoReverse);
+
+        if(texto == textoReverse){
+                console.log('Es palindromo');
+            } else {console.log('No es palindromo')};
+
+
+
+
+       // console.log(textoReverse);
+
+
+        
+
+       /*  var textoEnArray = (Array.from(texto));
+
+        var textoReversed = [...textoEnArray].reverse();
+
+        console.log(textoEnArray);
+        console.log(textoReversed);
+
+        if(textoEnArray == textoReversed){
+
+            alert('El texto es palindromo');
+        } else {
+            alert('El texto no es palindromo');
+        }; */
+
+        
+    
+    
+    </script>
+    
+</body>
+</html>

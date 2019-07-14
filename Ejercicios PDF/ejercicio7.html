@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+
+
+    <script>
+
+/* Definir una función que muestre información sobre una cadena de
+texto que se le pasa como argumento. A partir de la cadena que
+se le pasa, la función determina si esa cadena está formada sólo
+por mayúsculas, sólo por minúsculas o por una mezcla de ambas. */
+    
+    var cadenaDeTexto = prompt('Introduce un texto');
+
+    if(cadenaDeTexto === cadenaDeTexto.toUpperCase()){
+        alert('La cadena introducida es todo mayusculas');
+    } else if(cadenaDeTexto === cadenaDeTexto.toLocaleLowerCase()){
+        alert('La cadena de texto introducida es todo minusculas')
+    } else {
+        alert('La cadena introducida es mezcla de mayusculas y minusculas')
+    }
+    
+    
+    </script>
+    
+</body>
+</html>
