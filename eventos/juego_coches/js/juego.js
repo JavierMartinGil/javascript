@@ -23,14 +23,11 @@ function acelerarRojo(event) {
             break;
     }
 
-
     if (avanceRojo >= POSICION_FINAL) {
         pararTodo('Rojo');
     } else {
         cocheRojo.style.marginLeft = avanceRojo + "px";
     }
-
-
 }
 
 var cocheAmarillo = document.getElementById('coche2');
@@ -41,7 +38,6 @@ var intervalo = setInterval(acelerarAmarillo, 100);
 function acelerarAmarillo() {
     avanceAmarillo += 10;
 
-
     if (avanceAmarillo >= POSICION_FINAL) {
         pararTodo('Amarillo');
     } else {
@@ -50,25 +46,19 @@ function acelerarAmarillo() {
 
 }
 
-
-
 var cocheAzul = document.getElementById('coche3');
 var avanceAzul = 0;
 
 var intervalo2 = setInterval(acelerarAzul, 100);
 
 function acelerarAzul() {
-    avanceAzul += Math.random() * 25;
-
-
+    avanceAzul += Math.random() * 20;
     if (avanceAzul >= POSICION_FINAL) {
         pararTodo('Azul');
     } else {
         cocheAzul.style.marginLeft = avanceAzul + "px";
     }
-
 }
-
 
 function pararTodo(pNombreCoche) {
     h1.innerText = "Ha ganado " + pNombreCoche;
@@ -79,6 +69,4 @@ function pararTodo(pNombreCoche) {
     //clear interval para el evento del intervalo.
     clearInterval(intervalo); //para amarillo
     clearInterval(intervalo2); //para el azul
-
-
 }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data atributes</title>
+    <style>
+        .caja{
+            width: 400px;
+            height: 400px;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <ul id="menu">
+        <li><a href="juan.html" data-color="blue" data-imagen="image_1.jpg">NY 1</a></li>
+        <li><a href="#" data-color="red" data-imagen="image_2.jpg">NY 2</a></li>
+        <li><a href="#" data-color="green" data-imagen="image_3.jpg">NY 3</a></li>
+    </ul>
+
+    <div id="foto" class="caja">
+
+
+    </div>
+
+    <div id="color" class="caja">
+
+
+    </div>
+
+    <script>
+
+        var menu = document.getElementById('menu');
+
+        var enlaces = document.getElementsByTagName('a');
+
+        for(enlace of enlaces){
+
+            enlace.addEventListener('click', cargarAlgo);
+        }
+
+        function cargarAlgo(event){
+
+            event.preventDefault();
+            document.getElementById('color').style.backgroundColor = event.target.dataset.color;
+            document.getElementById('foto').style.backgroundImage = "url(images/"+event.target.dataset.imagen+")";
+        }
+    
+    
+    </script>
+    
+</body>
+</html>
