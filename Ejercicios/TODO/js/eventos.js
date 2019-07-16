@@ -4,10 +4,14 @@ var contenedorTareas = document.querySelector('.tareas');
 function pintarTareas(pListaTareas){
 
     contenedorTareas.innerHTML = "";
-
+   
     for(tarea of pListaTareas){
 
         pintarUnaTarea(tarea)
+    }
+
+    if (pListaTareas.length == 0){
+        document.getElementById('notareas').style.display = "block";
     }
 }
 
@@ -37,6 +41,7 @@ function pintarUnaTarea(pTarea){
         mitarea.appendChild(btnEliminar);
 
         contenedorTareas.appendChild(mitarea);
+        document.getElementById('notareas').style.display = "none";
     
 }
 
@@ -56,9 +61,15 @@ function recogerTarea(e){
 
     if(titulo != "" && prioridad != ""){
 
-        addTarea(titulo, prioridad);
         document.getElementById('mensaje').innerText = "";
-        pintarUnaTarea(addTarea(titulo, prioridad));
+        if(document.getElementById('selectprioridad') !=""){
+            addTarea(titulo, prioridad);
+            pintarTareas(listaTareas);
+            document.getElementById('selectprioridad').value = "";
+        } else {
+            pintarUnaTarea(addTarea(titulo, prioridad));
+        }
+       
         document.getElementById('tituloTarea').value = "";
         document.getElementById('prioridad').value = "";
 
@@ -69,3 +80,44 @@ function recogerTarea(e){
     
 }
 
+// filtros
+
+var selector = document.getElementById('selectprioridad');
+
+selector.addEventListener('change', recogerPrioridad)
+
+function recogerPrioridad(e){
+    var prioridad = e.target.value;
+     if(prioridad == ""){
+         pintarTareas(listaTareas);
+     } else {
+         var listaFiltrada = filtraTareas(prioridad);
+         pintarTareas(listaFiltrada);
+         
+     }
+}
+
+// busqueda
+
+var buscador = document.getElementById('search');
+
+buscador.addEventListener('keyup', recogerBusqueda);
+
+function recogerBusqueda(e){
+
+    var palabraBuscar = e.target.value;
+    
+    var listaBusqueda = buscarTarea(palabraBuscar);
+
+    pintarTareas(listaBusqueda)
+
+    if(listaBusqueda.length!=0){
+        
+        document.getElementById('notareas').style.display = "none";
+        pintarTareas(listaBusqueda);
+    } else { 
+        
+        document.getElementById('notareas').style.display = "block";
+
+    }
+}

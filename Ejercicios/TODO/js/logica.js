@@ -20,3 +20,24 @@ function borrartarea(pId){
 
     pintarTareas(listaTareas);
 }
+
+function filtraTareas(pPrioridad){
+
+    var listaTemporal = listaTareas.filter(function(tarea){
+
+        return tarea.prioridad == pPrioridad;
+
+    });
+
+    return listaTemporal;
+}
+
+function buscarTarea(pPalabra){
+    var listaTemporal = listaTareas.filter(function(tarea){
+        
+        return tarea.titulo.toLowerCase().startsWith(pPalabra);
+        
+    });
+
+    return listaTemporal;
+}
