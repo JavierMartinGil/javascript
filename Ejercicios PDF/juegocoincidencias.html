@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juego coincidencias</title>
+    <style>
+        .tablero{
+            display: flex;
+            width: 800px;
+            flex-wrap: wrap;
+        }
+
+        .carta{
+            width: 33%;
+            height: 200px;
+            background-color: aquamarine;
+            border: 1px solid black;
+        }
+    
+    
+    </style>
+</head>
+<body>
+        <!-- Juego de coincidencias, tendréis un tablero de tres por 3 x 2 en total seis cartas
+        dadas las vuelta. Ese tablero se formará con un array de elementos simples de
+        nombre de animales. Las cartas estarán dadas la vuelta boca a bajo y cada vez
+        que pinches en una carta mostrará el nombre del animal que guarda debajo.
+        Cuando el nombre coincida la carta se quedará boca arriba.
+        El juego acabará cuando todas las parejas se descubran, las posiciones de las
+        cartas serán siempre aleatorias
+        El array simple será algo como esto animales = [guepardo, león, lince, león, lince
+        , guepardo]. Es decir los elementos como veis se repiten en el array lo único que
+        el orden de las cartas será aleatorio. -->
+
+        <div class="tablero">
+
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+        </div>
+    
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio Diana</title>
+    <style>
+        .container{
+            width:600px;
+            height:600px;
+        }
+
+        .circulo{
+            border-radius:50%;
+            margin-left: auto;
+            margin-right: auto;            
+        }
+
+        #blanco{
+            width:500px;
+            height:500px;
+            background-color: white;
+            border:2px solid black;
+            position: relative;
+        }
+
+        #negro{
+            width:400px;
+            height:400px;
+            background-color: black;
+            position: absolute;
+            top: 10%;
+            left: 10%;             
+        }
+
+        #azul{
+            width:300px;
+            height:300px;
+            background-color: blue;
+            position: absolute;
+            top: 12%;
+            left: 13%;          
+        }
+
+        #rojo{
+            width:200px;
+            height:200px;
+            background-color: red;
+            position: absolute;
+            top: 17%;
+            left: 17%;           
+        }
+
+        #amarillo{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            top: 25%;
+            left: 25%;  
+        }
+    
+    
+    
+    </style>
+</head>
+<body>
+
+    <h1 id="puntuacion"></h1>
+
+    <div class="container">
+        <div class="circulo" id="blanco">
+                <div class="circulo" id="negro">
+                        <div class="circulo" id="azul">
+                                <div class="circulo" id="rojo">
+                                        <div class="circulo" id="amarillo">
+
+            
+
+
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+
+    </div>
+
+    <script>
+    /* Crear una diana en css como las de los campos de tiro. Utilizar el raton como
+mirilla. Una vez que apuntéis con la mirilla dentro de la diana, debéis decir que
+puntuación a conseguido. Para conseguir esto tendréis que definir cuanto mide
+la diana y cada uno de sus aros y asi podréis saber que puntuación tendréis
+cuando entráis en la diana por rangos o por círculos. */
+
+var circulos = document.getElementsByClassName('circulo');
+var puntuacion = document.getElementById('puntuacion');
+
+for (circulo of circulos){
+
+circulo.addEventListener('mouseover', sumarPuntos);
+}
+
+function sumarPuntos(event){
+
+    switch(event.target.id){
+        case "blanco":
+            puntuacion.innerText=('Has sumado 10 puntos');
+            break;
+
+        case "negro":
+            puntuacion.innerText=('Has sumado 20 puntos');
+            break;
+
+        case "azul":
+            puntuacion.innerText=('Has sumado 30 puntos');
+            break;
+
+        case "rojo":
+            puntuacion.innerText=('Has sumado 40 puntos');
+            break;
+
+        case "amarillo":
+            puntuacion.innerText=('Has sumado 50 puntos');
+            break;
+    };
+
+}
+
+
+    
+</script>
+    
+</body>
+</html>

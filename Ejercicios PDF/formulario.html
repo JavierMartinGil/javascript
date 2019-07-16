@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+</head>
+<body>
+
+      <!--   Crear un formulario de registro de usuario, que guarde los datos de los registros
+        de los usuarios en un array multidimensional.
+        El formulario deberá pedir el nombre, teléfono y edad.
+        El formulario deberá comprobar que el nombre introducido tenga más de tres
+        letras si no lanzará un mensaje de que el nombre introducido es demasiado corto
+        y no dejará registrar el usuario.
+        El formulario también deberá comprobar que la edad sea exclusivamente un
+        numero, no se podrán meter letras en ese campo y lanzará un mensaje si eso
+        ocurre.
+        El formulario deberá comprobar que el numero de teléfono metido tiene solo 9
+        cifras, ni una mas ni una menos.
+        Y por ultimo deberá comprobar que todos los campos están rellenos y no son
+        vacios. -->
+
+        <form action="">
+            <label for="">Nombre
+                <input type="text" name="nombre" id="nombre">
+            </label>
+
+            <label for="">Teléfono
+                    <input type="number" name="telefono" id="telefono">
+            </label>
+
+            <label for="">Edad
+                    <input type="number" name="edad" id="edad">
+            </label>
+            <input type="submit" value="Enviar" id="btn">
+        </form>
+
+        <script>
+            
+            var datos = new Array();
+
+            datos = [{
+                nombre: "",
+                telefono: "",
+                edad:""
+            }]
+
+            var boton = document.getElementById('btn');
+            var name = document.getElementById('nombre');
+            var tel = document.getElementById('telefono');
+            var age = document.getElementById('edad');
+
+            boton.addEventListener('click',almacenarDatos);
+
+            function almacenarDatos(event){
+
+                event.target.preventDefault();
+                datos.nombre = name.value;
+                datos.telefono = telefono.value;
+                datos.edad = age.value;
+                console.log(datos.nombre);
+
+            };
+        
+        </script>
+    
+</body>
+</html>
