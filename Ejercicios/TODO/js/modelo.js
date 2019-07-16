@@ -16,3 +16,5 @@ listaTareas = [{
         prioridad: 'mensual'
     }
 ]
+
+var contadorTareas = 3;
