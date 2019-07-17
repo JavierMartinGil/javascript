@@ -34,13 +34,12 @@ function filtraTareas(pPrioridad){
 
 function buscarTarea(pPalabra){
     
-        var busqueda = pPalabra.replace(/ /g,"");// quito los espacios en blanco
+        var busqueda = pPalabra.replace(/ /g,""); // quito los espacios en blanco
         busqueda = busqueda.toLowerCase(); // lo paso a minusculas
         /*
         includes //funcion que busca una cadena contenidaen otra
         startsWith // funcion que busca una cadena que empiece por otra
         endsWith // funcion que busca una cadena que termine por otra
-        
         
         */
 
