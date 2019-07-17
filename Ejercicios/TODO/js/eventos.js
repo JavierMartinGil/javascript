@@ -101,7 +101,7 @@ function recogerPrioridad(e){
 
 var buscador = document.getElementById('search');
 
-buscador.addEventListener('keyup', recogerBusqueda);
+buscador.addEventListener('input', recogerBusqueda);
 
 function recogerBusqueda(e){
 
@@ -111,13 +111,4 @@ function recogerBusqueda(e){
 
     pintarTareas(listaBusqueda)
 
-    if(listaBusqueda.length!=0){
-        
-        document.getElementById('notareas').style.display = "none";
-        pintarTareas(listaBusqueda);
-    } else { 
-        
-        document.getElementById('notareas').style.display = "block";
-
-    }
 }
