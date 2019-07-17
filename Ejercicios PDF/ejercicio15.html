@@ -15,48 +15,38 @@ Un palíndromo es un palabra que se escribe igual al derecho que
 al revés. dabale arroz a la zorra el abad */
 
 
-        var texto = prompt('Escribe un texto para ver si es un palindromo');
+        var cadena = 'ligar es ser agil';
+        var cadenaSinEspacio = cadena.split(" ");
+
+        
+
+        var cadenaSinEspacioReverse = [...cadenaSinEspacio].reverse();
+
+        console.log(cadenaSinEspacio);
+        console.log(cadenaSinEspacioReverse);
+
+
+      /*   var texto = prompt('Escribe un texto para ver si es un palindromo');
         // var texto = texto.replace(' ','');
         var textoReverse = texto.split('').reverse().toString();
+        texto = texto.split('').reverse().toString();
 
         for(i=0; i<textoReverse.length; i++){
 
-            textoReverse = textoReverse.replace(' ','');
-            textoReverse = textoReverse.replace(',','');
-          
+            textoReverse = textoReverse.replace(/ /g,'');
+            textoReverse = textoReverse.replace(/,/g,'');
            
         }
 
         console.log(textoReverse);
+        console.log(texto);
 
         if(texto == textoReverse){
                 console.log('Es palindromo');
             } else {console.log('No es palindromo')};
+ */
 
 
-
-
-       // console.log(textoReverse);
-
-
-        
-
-       /*  var textoEnArray = (Array.from(texto));
-
-        var textoReversed = [...textoEnArray].reverse();
-
-        console.log(textoEnArray);
-        console.log(textoReversed);
-
-        if(textoEnArray == textoReversed){
-
-            alert('El texto es palindromo');
-        } else {
-            alert('El texto no es palindromo');
-        }; */
-
-        
-    
     
     </script>
     

@@ -10,8 +10,7 @@
 
     <script>
 
-/* Realiza un script que cuente el número de vocales que tiene un
-texto. */
+/* Realiza un script que cuente el número de vocales que tiene un texto. */
     
     var texto = prompt('Escribe un texto');
 
@@ -21,13 +20,14 @@ texto. */
 
         var vocales = texto.charAt(i);
 
-        if (vocales == 'a' || vocales == 'e' || vocales == 'i' || vocales == 'o' || vocales == 'u'){
+        if (vocales == 'a' || vocales == 'e' || vocales == 'i' || vocales == 'o' || vocales == 'u'||
+        vocales == 'A' || vocales == 'E' || vocales == 'I' || vocales == 'O' || vocales == 'U'){
             
             contador++;
         }
 
     }
-     alert('El número de vocales del texto intriducido es '+ contador);
+     alert('El número de vocales del texto introducido es '+ contador);
     
     </script>
     

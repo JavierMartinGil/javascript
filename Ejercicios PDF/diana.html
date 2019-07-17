@@ -9,6 +9,7 @@
         .container{
             width:600px;
             height:600px;
+            margin: 0 auto;
         }
 
         .circulo{
@@ -67,9 +68,10 @@
 </head>
 <body>
 
-    <h1 id="puntuacion"></h1>
+    
 
     <div class="container">
+        <h1 id="puntuacion"></h1>
         <div class="circulo" id="blanco">
                 <div class="circulo" id="negro">
                         <div class="circulo" id="azul">
@@ -100,7 +102,7 @@ var puntuacion = document.getElementById('puntuacion');
 
 for (circulo of circulos){
 
-circulo.addEventListener('mouseover', sumarPuntos);
+circulo.addEventListener('click', sumarPuntos);
 }
 
 function sumarPuntos(event){
