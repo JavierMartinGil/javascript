@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        color: white;
+        text-align: right;
+    }
+    .menu{
+        background-color:red;
+        width: 120px;
+        margin-top: 30px;
+        padding: 20px;
+        transition : 1s;
+        cursor: pointer;
+    }
+
+    .menu-ancho{
+        
+        width: 150px;
+        transition : 1s
+    }
+    </style>
+</head>
+<body>
+
+
+    <div class="menu">BMW</div>
+    <div class="menu">Bugatti</div>
+    <div class="menu">Tesla</div>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+
+    var botones = $('.menu');
+
+    botones.on('mouseenter', mover);
+
+    function mover(e){
+
+        $(this).addClass('menu-ancho')
+        
+    }
+
+    botones.on('mouseout', mover2);
+
+    function mover2(e){
+
+      
+        $(this).removeClass('menu-ancho')
+     }
+    
+    
+    </script>
+    
+</body>
+</html>
