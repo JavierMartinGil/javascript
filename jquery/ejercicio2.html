@@ -27,18 +27,32 @@
         width: 150px;
         transition : 1s
     }
+
+    body{
+        background-image: url('images/imagen2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: 1s;
+    }
     </style>
 </head>
 <body>
 
 
-    <div class="menu">BMW</div>
-    <div class="menu">Bugatti</div>
-    <div class="menu">Tesla</div>
+    <div class="menu" data-coche='1'>BMW</div>
+    <div class="menu" data-coche='2'>Bugatti</div>
+    <div class="menu" data-coche='3'>Tesla</div>
     <script src="jquery-3.4.1.min.js"></script>
     <script>
 
     var botones = $('.menu');
+    botones.on('click', cargarImagen);
+
+    function cargarImagen(){
+
+        var nombreFoto = $(this).data('coche');
+        $('body').css('background-image', 'url(images/imagen'+nombreFoto+'.jpg)')
+    }
 
     botones.on('mouseenter', mover);
 
