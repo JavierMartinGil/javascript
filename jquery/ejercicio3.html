@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrusel automatico Ejercicio 3</title>
+</head>
+<style>
+
+.galeria{
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    border: 5px solid black;
+
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+</style>
+<body>
+
+    <div class="galeria">
+        <img src="images/imagen1.jpg" alt="dodge">
+    </div>
+
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+    var imagen = $('.galeria img');
+
+    setInterval(cambiarImagen,2000)
+
+    var contador = 1;
+    
+    function cambiarImagen(){
+   
+    imagen.attr('src','images/imagen'+contador+'.jpg');
+    
+    contador++;
+    if (contador == 4)
+    {contador = 1}
+    }
+             
+        
+    </script>
+</body>
+</html>

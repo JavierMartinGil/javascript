@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atributos html manejados con jQuery</title>
+</head>
+<body>
+    
+<img src="images/imagen1.jpg" alt="car" id="imagen">
+
+
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+// como saber que valor tiene un atributo
+
+alert($('img').attr('id'));
+
+// como modificar el atributo
+
+$('#imagen').attr('src', 'images/imagen2.jpg');
+
+
+</script>
+</body>
+</html>
