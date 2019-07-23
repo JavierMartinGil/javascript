@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Juego de coincidencias</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    #tablero {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #tablero .carta {
+      width: 30%;
+      margin-left: 3%;
+      background-color: tomato;
+      height: 200px;
+      padding: 20px;
+      margin-top: 3%;
+      cursor: pointer;
+    }
+
+    #tablero .carta h2 {
+      display: none;
+    }
+
+    #tablero .cartaSeleccionada {
+      width: 30%;
+      margin-left: 3%;
+      background-color: indigo;
+      height: 200px;
+      padding: 20px;
+      margin-top: 3%;
+    }
+  </style>
+  <body>
+    <div id="tablero">
+      <!-- <div class="carta">
+            <h2>Nombre del animal</h2>
+        </div>
+        <div class="carta">
+            <h2>Nombre del animal</h2>
+        </div>
+        <div class="carta">
+            <h2>Nombre del animal</h2>
+        </div>
+        <div class="carta">
+            <h2>Nombre del animal</h2>
+        </div>
+        <div class="carta">
+            <h2>Nombre del animal</h2>
+        </div>
+        <div class="carta">
+            <h2>Nombre del animal</h2>
+        </div>                             -->
+    </div>
+
+    <script>
+      var listaAnimales = new Array(
+        "leon",
+        "guepardo",
+        "pantera",
+        "leon",
+        "pantera",
+        "guepardo"
+      );
+
+      var tablero = document.getElementById("tablero");
+      var contarCartas = 0;
+      var parejas = new Array();
+
+      function lanzarCartas(pLista) {
+        var cartas = "";
+        for (carta of pLista) {
+          var micarta = document.createElement("div");
+          micarta.className = "carta";
+          var h2 = `<h2>${carta}</h2>`;
+          micarta.innerHTML = h2;
+          tablero.appendChild(micarta);
+          micarta.addEventListener("click", darVuelta);
+        }
+      }
+
+      function darVuelta(e) {
+        e.target.style.backgroundColor = "indigo";
+        e.target.children[0].style.display = "block";
+        e.target.children[0].style.color = "black";
+        contarCartas++;
+        if (contarCartas >= 3) {
+          var todasCartas = document.getElementsByClassName("carta");
+          for (carta of todasCartas) {
+            carta.style.backgroundColor = "tomato";
+            carta.firstChild.style.display = "none";
+            carta.addEventListener("click", darVuelta);
+          }
+          contarCartas = 0;
+          parejas = [];
+        } else if (contarCartas < 3) {
+          e.target.removeEventListener("click", darVuelta);
+          parejas.push(e.target);
+        }
+
+        if (
+          parejas.length == 2 &&
+          parejas[0].firstChild.innerText == parejas[1].firstChild.innerText
+        ) {
+          //alert("son iguales");
+          for (var i = 0; i < parejas.length; i++) {
+            parejas[i].removeEventListener("click", darVuelta);
+            parejas[i].className = "cartaSeleccionada";
+          }
+          parejas = [];
+          contarCartas = 0;
+        }
+      }
+
+      lanzarCartas(listaAnimales);
+
+      // teneis que saber el texto de la carta que pinchais, compararlo con el de la segunda carta y entonces removeis
+      // el listener de esas dos cartas
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<script>
+  var listaTemporal = new Array(
+    "pato",
+    "cocodrilo",
+    "pato",
+    "faisan",
+    "cocodrilo",
+    "faisan"
+  );
+  listaTemporal = listaTemporal.sort(function() {
+    return Math.random() - 0.5;
+  });
+  document.write(listaTemporal); // imprime por ejemplo: 7,9,1,5,2,3,6,4,8
+</script>
