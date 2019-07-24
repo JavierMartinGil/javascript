@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <!-- necesito crear un arrays de nombres, un arrays de edades y un array de sexos todos los listados son simples y de la misma longitud  cuando tengais todos los arrays hechos tendreis que forma un array multidimensional de personas donde cada persona va tener un nombre, edad, y sexo.
+
+el objetivo del ejercicio una vez pintado el array es crear una función de filtro que me permita filtrar conjuntamente edades con sexo sacando en cada caso el conjunto de personas que cumplan por ejemplo que sean mujer de 40 años
+
+una vez que tengamos dicha función tenemos que crear el interfaz que me permite filtrar dichos campos. -->
+
+        <label>Selecciona una edad maxima
+            <input type="number" name="" id="edadmax">
+        </label>
+
+        <label>Selecciona una edad minima
+            <input type="number" name="" id="edadmin">
+        </label>
+        <button id="btn">Ver nombres</button>
+
+        <script>
+            var nombres = new Array('Juan', 'Luisa', 'Pedro');
+            var sexo = new Array('hombre', 'mujer', 'hombre');
+            var edades = new Array(20, 40, 44);
+            var edadmax;
+            var edadmin;
+            var boton = document.getElementById('btn');
+            boton.addEventListener('click', filtrar);
+
+            var personas = new Array();
+
+            for (var i = 0; i < nombres.length; i++) {
+
+                personas.push(
+
+                    {
+                        nombre: nombres[i],
+                        genero: sexo[i],
+                        edad: edades[i]
+                    }
+                );
+            }
+
+            //console.log(personas);
+
+            function filtrar() {
+
+                for (persona of personas) {
+                    edadmax = document.getElementById('edadmax').value;
+                    edadmin = document.getElementById('edadmin').value;
+
+                    if (persona.edad <= edadmax && persona.edad >= edadmin) {
+                        alert(persona.nombre);
+                    } else { }
+
+                }
+
+            }
+
+            //filtrar(personas, edadmax, edadmin);
+
+
+        </script>
+
+    </body>
+
+</html>
