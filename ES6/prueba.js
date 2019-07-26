@@ -1,0 +1,1 @@
+console.log('estoy accediendo desde el terminal')
