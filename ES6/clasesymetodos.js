@@ -91,6 +91,6 @@ edif.agregarCasa(viv1);
 edif.agregarCasa(viv2);
 
 
-console.log(viv1.mostrar());c
+console.log(viv1.mostrar());
 console.log(viv2.mostrar());
 
